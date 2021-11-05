@@ -1,0 +1,28 @@
+.jumbotron{
+    background-image: url("https://scontent.ftpe7-1.fna.fbcdn.net/v/t39.30808-6/252491345_1164220950772779_5827456484482001330_n.jpg?_nc_cat=106&_nc_rgb565=1&ccb=1-5&_nc_sid=730e14&_nc_ohc=YeftdvsevbwAX9I1jJf&_nc_oc=AQl_SUysP0o0C6Sf6KAmKzLdxl476P60TemUS2N9FORsiUxhJqgbtcDEQX_kfWeW5RczqS6fjEXxThoi8-CeoszC&_nc_ht=scontent.ftpe7-1.fna&oh=7da6fdd9c51e4ff997004fa21aecebf7&oe=6189F086");
+    background-size: 80%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+
+.container{
+    width: 50%;
+}
+
+#title{
+    text-align: center;
+    color:dodgerblue;
+}
+
+p{
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 150;
+    color:darkslategrey;
+}
+
+#method{
+    text-align:center;
+    color:goldenrod;
+}
