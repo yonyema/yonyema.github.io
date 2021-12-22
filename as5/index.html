@@ -8,77 +8,38 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>等不到的一列車——捷運民生汐止線 20 年來的規劃與延宕</title>
+    <title>Assignment 5</title>
   </head>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <body>
-    <div style="height:100vh;background-image: url(https://res.cloudinary.com/dr6z4jfde/image/upload/v1637940729/cover_qlmosr.jpg); background-size: cover;">
-      <div style="height: 400px;"></div>
-      <div style="background-color:rgba(26, 49, 22, 0.432); width: 50%; margin: 0 auto;">
-        <h1 style="text-align: center; color: rgb(119, 184, 110);">等不到的一列車</h1>
-        <h3 style= "text-align: center; color: rgb(202, 209, 201);">捷運民生汐止線 20 年來的規劃與延宕</h3>
-      </div>
+    <div id="outer" style="height:300vh;">
+        <img class="opa" src="https://lh3.googleusercontent.com/k271iwAjUHpWsQJUW6YsD8ofzTTybZJuCTcG_XHTHVqateX629Yk0GBWFw0jWeHi-3PFRKxbgXpSVVXlB3UkaKk5YZ5jEQGnEdvphfXtJMC6O-sxaTaym5EApqxxn64lC8l4qVGgvjA=w2400" style="position:fixed;opacity:1;width:100vw;z-index:4" data-pos="1" ;>
+        <img class="opa" src="https://lh3.googleusercontent.com/vnT-R7rYCkaizV7wNwk6Auqxv_4D2hkr_EiJDBJt8Al_byWHEStewfwRyFYC9cxbjDWRdWigxJqfxvXdNM-QO0MCsghgETFkubAPu95SvSr8PsYDqfCMbLkoS_Ab59wu4BgutcEW1nw=w2400" style="position:fixed;opacity:1;width:100vw;z-index:3" data-pos="2" ;>
+        <img class="opa" src="https://lh3.googleusercontent.com/somMp7h_vii8uLbGV0urRxZnPgdSKu10_AiqyLbxxJegxjEi5-bQ7vM5Ui1DiRLI7EpAfGXpMijQGuRifLOYUoZV4B32I4ifVa6bLNFzRN9yA0N7YuFpDDAhDQOANZtMHLenJXQSJxg=w2400" style="position:fixed;opacity:1;width:100vw;z-index:1" data-pos="3">
     </div>
-
-    <div style="height: 70vh; background-color:rgba(135, 160, 146, 0.664);">
-      <div style="height: 90px;"></div>
-      <div style="width:55%; margin: 0 auto;">
-        <font size="5" style="color:rgb(104, 121, 109); line-height: 200%;">捷運民生汐止線是台北交通規劃下，一條橫貫台北市民權東路、預計連接台北大稻埕、汐止市區的捷運路線。其目的為疏通汐止到台北的交通人潮，讓大眾運輸系統分擔汐止與台北市區來回的車流量。然而從 1990 年首度被提出、2004 年開始正式由台北市政府規劃以來，民生汐止線經歷規劃路線改變、台鐵地下化、台北與新北捷運系統責任交接、環評與預算不足等問題，導致捷運始終無法開始動工，預計開通時間也持續延宕。</font>
-      </div>
-    </div>
-
-    <script>
-      (function() {
-        var namespace = '__twreporterEmbeddedData';
-        var pkg = 'scrollable-video';
-        if (typeof window != 'undefined') {
-          if (!window.hasOwnProperty(namespace)) {
-            window[namespace] = {};
-          }
-          if (window[namespace] && !window[namespace].hasOwnProperty(pkg)) {
-            window[namespace][pkg] = [];
-          }
-          if (Array.isArray(window[namespace][pkg])) {
-            var data = {"video":{"sources":[{"type":"video\u002Fmp4","src":"https:\u002F\u002Fres.cloudinary.com\u002Fdr6z4jfde\u002Fvideo\u002Fupload\u002Fv1637711320\u002Fmrtxizhi-1280_j66jm6.mp4","width":1280,"height":720},{"type":"video\u002Fmp4","src":"https:\u002F\u002Fres.cloudinary.com\u002Fdr6z4jfde\u002Fvideo\u002Fupload\u002Fv1637711298\u002Fmrtxizhi-1440_hqnryh.mp4","width":1360,"height":764},{"type":"video\u002Fmp4","src":"https:\u002F\u002Fres.cloudinary.com\u002Fdr6z4jfde\u002Fvideo\u002Fupload\u002Fv1637711330\u002Fmrtxizhi-1920_bmb3wi.mp4","width":1920,"height":1080},{"type":"video\u002Fmp4","src":"https:\u002F\u002Fres.cloudinary.com\u002Fdr6z4jfde\u002Fvideo\u002Fupload\u002Fv1637711301\u002Fmrtxizhi-720_mdpogv.mp4","width":720,"height":404},{"type":"video\u002Fmp4","src":"https:\u002F\u002Fres.cloudinary.com\u002Fdr6z4jfde\u002Fvideo\u002Fupload\u002Fv1637711296\u002Fmrtxizhi-960_inlmci.mp4","width":960,"height":540}]},"captions":[{"text":"地圖藍色線，為民生汐止線的預計路線與站點。深黑線則為現有台北捷運系統路線。","time":0},{"text":"台北市路段，連接既捷運有站點雙連站、行天宮站、東湖站。","time":2},{"text":"台北市主要路段，從大稻埕延伸到基隆河岸，隸屬第二期工程。環評從 2016 年開始進行，直到 2020 年才通過。","time":5},{"text":"第一期工程由基隆河東岸始，穿越東湖，延伸到汐止社后、汐科，終於汐止市區。","time":7.5},{"text":"然而漫長的第二期環評過程，也連帶影響第一期工程進行。","time":10},{"text":"同樣正在規劃興建的基隆捷運系統，將與民生汐止線在社后一帶交會，此處將設立捷運機廠，供雙線捷運共用。","time":12.3}],"appProps":{"captionsSetting":{"xBoxAlign":"right","xPosition":"8.7%","yBoxAlign":"bottom","yPosition":"20px"},"captionSetting":{"textAlign":"right"},"secondsPer100vh":1.5,"skipLoadLocationRegExp":"editor","forcedPreloadVideo":true,"gsapVersion":"3.5.1","scrollTriggerVersion":"3.5.1","pollingTimeout":700,"preloadCacheType":"force-cache"},"theme":{"mq":{"mobileMaxWidth":"767px"},"captions":{"color":"#fff","link":{"color":"#a67a44","underlineColor":"#a67a44"},"lineHieght":"1.7","mobileLineHeight":"1.7","fontStyle":"normal","fontWeight":"bold","fontSize":"24px","mobile":{"fontSize":"22px"},"fontFamily":"ff-tisa-web-pro, source-han-sans-traditional, Noto Sans TC, PingFang TC, Apple LiGothic Medium, Roboto, Microsoft JhengHei, Lucida Grande, Lucida Sans Unicode, sans-serif","box":{"background":"#404040","width":"450px","mobileWidth":"77%","spanPadding":"6px 15px","mobilePadding":"12px 12px 14px 18px"}}},"uuid":"c654680f-1ab5-4607-b297-f3c709854f40"};
-            window[namespace][pkg].push(data);
-          }
-        }
-      })()
-    </script>
-    <div id="c654680f-1ab5-4607-b297-f3c709854f40"></div>
     
-    <script type="text/javascript" crossorigin src="https://unpkg.com/@twreporter/scrollable-video@1.0.0-rc.3/dist/main.142ef5f0d6d2dfdb8b8d.bundle.js"></script>
-  
- 
-    <div style="height: 70vh; background-color:rgba(135, 160, 146, 0.664);">
-      <div style="height: 90px;"></div>
-      <div style="width:55%; margin: 0 auto;">
-        <font size="5" style="color:rgb(104, 121, 109); line-height: 200%;">現階段而言，捷運民生汐止線兩期環評皆已通過，預計首先開發汐止到東湖路段。2021 年 7 月 30 日，新北市政府第一次向交通部提交綜合規劃報告。然而捷運線的建設仍多變數。2021 年 11 月 4 日台北市長柯文哲即表示，民生汐止線隸屬於大台北交通規劃三環三線系統之下，需依序完成建設，待東環狀線完成後，才能開始著手民生汐止線的興建。延宕 20 年的捷運規劃，動工與完工依然遙遙無期。</font>
-      </div>
-    </div>
-
-    <div style="height:30vh; background-color: gainsboro;">
-      <div style="height: 20px;"></div>
-      <div style="width:55%; margin: 0 auto;">
-        <font size="4" style="color:rgb(82, 81, 81); line-height: 200%;">資料來源：</font>
-      </div>
-      <div style="width:55%; margin: 0 auto;">
-        <font size="4" style="color:rgb(114, 114, 114); line-height: 200%;">1. Wikipedia：https://zh.wikipedia.org/</font>
-      </div>
-      <div style="width:55%; margin: 0 auto;">
-        <font size="4" style="color:rgb(114, 114, 114); line-height: 200%;">2. 中央社：https://www.cna.com.tw/news/firstnews/202111040105.aspx</font>
-      </div>
-      <div style="width:55%; margin: 0 auto;">
-        <font size="4" style="color:rgb(114, 114, 114); line-height: 200%;">3. 捷運民生汐止線最新進度：https://ibuyranking.blogspot.com/p/minsheng-xizhi-metro-line.html</font>
-      </div>
-      <div style="width:55%; margin: 0 auto;">
-        <font size="4" style="color:rgb(114, 114, 114); line-height: 200%;">4. TVBS 新聞網：https://news.tvbs.com.tw/life/1449704</font>
-      </div>
-    </div>
+    <div style="background:grey;height:100vh"></div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+          $(function () {
+        var scrollable = $("#outer").height();
+        console.log(scrollable);
+        $(window).scroll(function () {
+            var scrolled = $(document).scrollTop();
+            $(".opa").each(function (index) {
+                $(this).css("opacity", $(this).data("pos") - (3 * scrolled) / scrollable);
+                console.log(
+                    "[" + scrolled / scrollable + "]" + index + ": " + $(this).css("opacity")
+                );
+            });
+        });
+    });
+    </script>
+    
+    
+    
+
   </body>
 </html>
