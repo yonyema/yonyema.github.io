@@ -1,0 +1,78 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>街貓誘捕</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/shadow.css">
+
+
+    <style>
+        #div1 {
+            background-image: url("https://res.cloudinary.com/dr6z4jfde/image/upload/v1641535393/as7/bg_m1egau.jpg");
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #title {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <script   src="https://code.jquery.com/jquery-3.4.1.min.js"   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="   crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <div style="background-color:rgb(66, 95, 124);height:100vh;">
+        <div style="height: 48vh;"></div>
+        <div id="title">
+            <h1 style="color: gainsboro;">街貓誘捕</h1>
+        </div>
+    </div>
+    <div id="div1" class="innershadow1" style="background-color:black;height:200vh;position:relative;">
+        <img id="cat" data-top=30 data-top2=75 data-left=35 data-left2=28  data-width=8 data-width2=25 src="https://res.cloudinary.com/dr6z4jfde/image/upload/v1641535458/as7/cat_empo26.png" class="dropshadow1" style="position:absolute;width:8%;top:30%;left:35%;filter:grayscale(.3) blur(0px);">
+        <img id="food" data-top=30 data-top2=90 data-left=0   data-left2=23 data-width=38 data-width2=10 src="https://res.cloudinary.com/dr6z4jfde/image/upload/v1641567350/as7/food_knd4hq.png" class="dropshadow1" style="position:absolute;width:38%;top:30%;left:0%;">
+        <img id="cage" data-top=0 data-top2=70 data-left=20   data-left2=20 data-width=0 data-width2=32 src="https://res.cloudinary.com/dr6z4jfde/image/upload/v1641565382/as7/cage_deb0gp.png" class="dropshadow1" style="position:absolute;width:0%;top:0%;left:20%;">
+    </div>
+    <div style="background-color:rgb(207, 207, 207);height:100vh"></div>
+
+    </div>
+
+
+
+    <script>
+        $(document).ready(function() {
+            var div1_pos = $("#div1").offset().top;
+            var div1_end = div1_pos + $("#div1").height();
+            var winh = $(window).height();
+            $(window).scroll(function() {
+                var scrolled = $(window).scrollTop();
+                var div1_scrolled = scrolled - div1_pos;
+                var div1h = $("#div1").height();
+                if (div1_scrolled > 0 && scrolled < div1_end - winh) {
+                    $("#cat").css('left', (($("#cat").data('left2')-$("#cat").data('left'))*div1_scrolled/winh + $("#cat").data('left')) + '%');
+                    $("#cat").css('top', (($("#cat").data('top2')-$("#cat").data('top'))*div1_scrolled/winh + $("#cat").data('top')) + '%');
+                    $("#cat").css('width', (($("#cat").data('width2')-$("#cat").data('width'))*div1_scrolled/winh + $("#cat").data('width')) + '%');
+                    
+                    $("#food").css('left', (($("#food").data('left2')-$("#food").data('left'))*div1_scrolled/winh + $("#food").data('left')) + '%');
+                    $("#food").css('top', (($("#food").data('top2')-$("#food").data('top'))*div1_scrolled/winh + $("#food").data('top')) + '%');
+                    $("#food").css('width', (($("#food").data('width2')-$("#food").data('width'))*div1_scrolled/winh + $("#food").data('width')) + '%');
+
+                    $("#cage").css('left', (($("#cage").data('left2')-$("#cage").data('left'))*div1_scrolled/winh + $("#cage").data('left')) + '%');
+                    $("#cage").css('top', (($("#cage").data('top2')-$("#cage").data('top'))*div1_scrolled/winh + $("#cage").data('top')) + '%');
+                    $("#cage").css('width', (($("#cage").data('width2')-$("#cage").data('width'))*div1_scrolled/winh + $("#cage").data('width')) + '%');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
