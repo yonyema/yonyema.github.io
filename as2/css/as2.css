@@ -1,0 +1,28 @@
+.jumbotron{
+    background-image: url(/as2/assets/site1.jpg);
+    background-size: 80%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+
+.container{
+    width: 50%;
+}
+
+#title{
+    text-align: center;
+    color:dodgerblue;
+}
+
+p{
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 150;
+    color:darkslategrey;
+}
+
+#method{
+    text-align:center;
+    color:goldenrod;
+}

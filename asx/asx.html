@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Special Assignment</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+
+    <style>
+        /* Section 1 */
+        #horizontal {
+            position: absolute;
+            left: 0;
+            height: 100vh;
+            width: 1200vw;
+            background-image: url("https://static01.nyt.com/newsgraphics/2016/07/14/france-attack-scroller/9ec6dcec7e22fffa81a21fb790ba566f2c6aee83/base-big.jpg");
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Section 2 */
+        .fixed {
+            position: fixed;
+            top: 0;
+        }
+
+        /* Section 3 */
+        .slideanimate {
+            width: 100%;
+            visibility: hidden;
+        }
+
+        .slide {
+            animation-name: slide;
+            animation-duration: 1s;
+            visibility: visible;
+        }
+
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+    </style>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous">
+    </script>
+
+
+</head>
+
+<body>
+    <!-- Section 1 -->
+    <div style="height:50vh;background-color:royalblue"></div>
+    <div style="min-height:1000vh">
+        <div class="sticky-top">
+            <div id="horizontal"></div>
+        </div>
+    </div>
+    <div style="height:300vh;background-color:gray"></div>
+
+    <!-- Section 2 -->
+    <div style="height:500px;background-color: dodgerblue;"></div>
+    <div id="tofix1" style="height:100px;background-color: coral;z-index:99; width:100%"></div>
+    <div style="height:500px;background-color: lightgrey;"></div>
+    <div style="height:500px;background-color: white;">
+        <svg id="tofix2" width="250" height="250" style="z-index:100;">
+            <circle cx="100" cy="100" r="100" fill="coral" />
+        </svg>
+    </div>
+    <div style="height:50vh;background-color: grey;"></div>
+    <div id="tofix3" style="height:50vh;background-color: grey;"></div>
+
+    <!-- Section 3 -->
+    <div style="height:100vh;background-color:royalblue"></div>
+    <div>
+        <img class="slideanimate" src="https://p4css.github.io/webScroll/assets/taipei-1.jpg" />
+        <img class="slideanimate" src="https://p4css.github.io/webScroll/assets/taipei-2.jpg" />
+        <img class="slideanimate" src="https://p4css.github.io/webScroll/assets/taipei-3.jpg" />
+        <img class="slideanimate" src="https://p4css.github.io/webScroll/assets/taipei-4.jpg" />
+    </div>
+    <div style="height:100vh;background-color:gray"></div>
+
+    <script>
+        /* Section 1 */
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var max_scroll = $(document).height() - $(window).height();
+                var max_w = $("#horizontal").width() - $(window).width();
+                var current_pos = $(window).scrollTop();
+                console.log(current_pos);
+
+                var new_left = (-1 * max_w * current_pos) / max_scroll;
+                $("#horizontal").css({
+                    left: new_left
+                });
+            });
+        });
+        
+        /* Section 2 */
+        var tofix1_pos = $("#tofix1").offset().top;
+        var tofix2_pos = $("#tofix2").offset().top;
+        var tofix3_pos = $("#tofix3").offset().top;
+        $(window).scroll(function () {
+            var current_pos = $(window).scrollTop();
+            if (current_pos > tofix1_pos) {
+                $("#tofix1").addClass("fixed");
+            } else {
+                $("#tofix1").removeClass("fixed");
+            }
+            if (current_pos > tofix2_pos) {
+                $("#tofix2").addClass("fixed");
+            } else {
+                $("#tofix2").removeClass("fixed");
+            }
+            if (current_pos > tofix3_pos) {
+                $("#tofix1").removeClass("fixed");
+                $("#tofix2").removeClass("fixed");
+            }
+
+        });
+
+        /* Section 3 */
+        $(function () {
+            var winh = $(window).height();
+            $(window).scroll(function () {
+                $(".slideanimate").each(function () {
+                    var scrolled = $(window).scrollTop();
+                    var objpos = $(this).offset().top;
+                    if (objpos < scrolled + winh * 0.8) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
